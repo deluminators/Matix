@@ -1,0 +1,9 @@
+.statusContainer{
+	border:solid 1px blue;
+	border-radius: 30px;
+	padding:10px 30px;
+	min-height: 400px;
+	width:50%;
+	margin:30px auto;
+	box-shadow: 0 0 3px #04befe;
+}
