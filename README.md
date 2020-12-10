@@ -17,7 +17,24 @@ Numpy,  Pandas,  LightGBM,  NLTK,  Scikit-Learn,  Tensorflow,  keras
 ###### APIs Used
 Twitter Streaming API
 
-
+#### Instructions to run
+1- Clone the repository  
+2- Launch the terminal or powershell or command prompt and enter the following command
+   ```
+   cd Matix/Application Code/Myproject
+   python manage.py runserver
+   ```
+3- This will start the backend server running in the Django framework in default port 8000. To run the server in different port, execute the following command
+   ```
+   python manage.py runserver 8671
+   ```
+4- For starting the frontend framework running in ReactJS, enter the following command
+```
+cd Matix/Application Code/Myproject/frontend
+npm start
+```
+   This will start the ReactJS framework for frontend in port 3000  
+5- Launch any web browser and enter address [http://localhost:3000](http://localhost:3000) to access the  web application
 
 ### Team Members
 ----------------------------------
