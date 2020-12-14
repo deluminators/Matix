@@ -1,3 +1,4 @@
+#Script for fetching Twitter data and running basic sentimental analysis for gaining insights on brand and product popularity
 def socialMediaDellTech():
     import tweepy
     from tweepy.streaming import StreamListener
