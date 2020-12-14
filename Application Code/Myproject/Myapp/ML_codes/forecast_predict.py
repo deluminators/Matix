@@ -1,3 +1,4 @@
+#Function for scaling value in definitive range.
 def scaleValues(data):
     if data>25:
         data-=(int(data/25)*25)
@@ -6,6 +7,7 @@ def scaleValues(data):
     return data
 
 
+#Callable function with date as argument for predicting demand for next 7 days from given date.
 def predict(initDate="today"):
     import pandas as pd
     import numpy as np
@@ -16,6 +18,7 @@ def predict(initDate="today"):
     from datetime import timedelta
     from collections import defaultdict
 
+    #Making the prediction dataframe
     if(initDate=="today" or initDate==str(date.today())):
         initDate=str(date.today())
         initDate=(datetime.strptime(initDate, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')
@@ -49,6 +52,7 @@ def predict(initDate="today"):
 
     df=pd.DataFrame(rows,columns=["id","date","item"])
 
+    #Prediction using the saved LightGBM model for Time series prediction
     pred_model=lgb.Booster(model_file='Myapp/ML_codes/model.txt')
     df['date'] = pd.to_datetime(df['date'])
     df['month'] = df['date'].dt.month
@@ -66,7 +70,7 @@ def predict(initDate="today"):
     return finalResult    
 
 
-
+#Prediction of demand with argument date inclusive
 def predictToday(initDate="today"):
     import pandas as pd
     import numpy as np
