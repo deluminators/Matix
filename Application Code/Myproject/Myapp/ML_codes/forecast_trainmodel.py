@@ -1,3 +1,5 @@
+#Callable function TimeSeriesForecastTrain() for training the machine learning model implemented on LightGBM model for Time Series based analysis.
+
 def TimeSeriesForecastTrain():
     import os
     import gc
@@ -13,6 +15,8 @@ def TimeSeriesForecastTrain():
     train_df=pd.read_csv("Myapp/ML_codes/forecast_train.csv")
 
     train_df['date'] = pd.to_datetime(train_df['date'])
+    
+    #Splits training dataset for time series analysis based on multiple tested parameters for LightGBM model.
 
     train_df['month'] = train_df['date'].dt.month
     train_df['day'] = train_df['date'].dt.dayofweek
