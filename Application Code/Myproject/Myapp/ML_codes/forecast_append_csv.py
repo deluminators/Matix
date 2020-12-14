@@ -1,3 +1,4 @@
+#Callable function for appending training dataset for repetitive updation of the prediction model's training process.
 def append_csv(data):
 	import numpy as np 
 	import pandas as pd 
