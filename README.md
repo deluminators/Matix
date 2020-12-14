@@ -40,9 +40,21 @@ npm start
    This will start the ReactJS framework for frontend in port 3000  
 5- Launch any web browser and enter address [http://localhost:3000](http://localhost:3000) to access the  web application
 
+
+### Future Scope
+1- [UNDER RESEARCH] Implementing the Reinforcement Learning based Q-lesrning approach along with inferences to Bat Algorithm for the optimization process in providing better feedback on the optimal usage.  
+2- Changes in optimization algorithm for better hamdling production line failures thus to generate new plan based on the ready queue of items yet to manufacture and production lines still working.  
+3- Development of mobile application support for easy access of plan data to whomsoever meeded.  
+4- A Buffer inventory management system for better planning for future orders.  
+5- [IMPLEMENTATION DEPENDENT] Integration with manufacturing factory thus to use external factors in optimal planning.
+
+
+### Contributions
+For existing bugs and adding more features open a issue [here](https://github.com/deluminators/Matix/issues)
+
 ### Team Members
 ----------------------------------
-Sanjiban Sengupta,<b518041@iiit-bh.ac.in>  
+Sanjiban Sengupta,<b518041@iiit-bh.ac.in> 
 Ananya Aprameya,<b318004@iiit-bh.ac.in>  
 Sarthak Bramha,<b418045@iiit-bh.ac.in>  
 Sarthak Das,<b518042@iiit-bh.ac.in>  
