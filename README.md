@@ -41,6 +41,11 @@ npm start
 5- Launch any web browser and enter address [http://localhost:3000](http://localhost:3000) to access the  web application
 
 
+### Application Code Description
+Description and technical information about all application codes can be found  [here](https://github.com/deluminators/Matix/blob/main/Application%20Code/Readme.md).
+
+
+
 ### Future Scope
 1- [UNDER RESEARCH] Implementing the Reinforcement Learning based Q-lesrning approach along with inferences to Bat Algorithm for the optimization process in providing better feedback on the optimal usage.  
 2- Changes in optimization algorithm for better hamdling production line failures thus to generate new plan based on the ready queue of items yet to manufacture and production lines still working.  
@@ -54,7 +59,7 @@ For existing bugs and adding more features open a issue [here](https://github.co
 
 ### Team Members
 ----------------------------------
-Sanjiban Sengupta,<b518041@iiit-bh.ac.in> 
+Sanjiban Sengupta,<b518041@iiit-bh.ac.in>   
 Ananya Aprameya,<b318004@iiit-bh.ac.in>  
 Sarthak Bramha,<b418045@iiit-bh.ac.in>  
 Sarthak Das,<b518042@iiit-bh.ac.in>  
