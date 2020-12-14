@@ -1,3 +1,4 @@
+#Script for fetching Twitter data and running basic sentimental analysis for gaining insights on brand and product popularity.
 def socialMediaDellDigital():
     import tweepy
     from tweepy.streaming import StreamListener
@@ -19,7 +20,7 @@ def socialMediaDellDigital():
     val="start"
     for items in hash_tag_list:
         print('first loop started')
-        for tweet in tweepy.Cursor(api.search,q=items,count=10,lang="en",since=initDate).items():
+         for tweet in tweepy.Cursor(api.search,q=items,count=10,lang="en",since=initDate).items():
             val=val+tweet.text
             print (tweet.created_at, tweet.text)
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
