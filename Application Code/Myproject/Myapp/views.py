@@ -1,3 +1,5 @@
+#Code to render corresponding Html pages, Generate Required JSON files, and handle API calls
+
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 #for AUTHENTICATION
@@ -21,6 +23,7 @@ from . import scrapper
 
 from datetime import date,datetime,timedelta
 
+#to implement Login Feature
 class LoginAPI(KnoxLoginView):
     permission_classes = (permissions.AllowAny,)
 
@@ -32,7 +35,7 @@ class LoginAPI(KnoxLoginView):
         return super(LoginAPI, self).post(request, format=None)
 
 
-
+#API to give the header data of Dashboard
 @api_view(["GET"])
 def dashboardDetails(request):
     params = []
@@ -45,18 +48,21 @@ def dashboardDetails(request):
     return Response(params)
 
 
+#API to get all the available orders
 @api_view(["GET"])
 def orderList(request):
     orders = order.objects.all()
     serializer = orderDetailsSerializer(orders, many=True)
     return Response(serializer.data)
 
+#API to get a specific order details by order ID
 @api_view(["GET"])
 def orderDetails(request,pk):
     orders = order.objects.get(orderID=pk)
     serializer = orderSerializer(orders, many=False)
     return Response(serializer.data)
 
+#API to create an order
 @api_view(["POST"])
 def orderCreate(request):
     serializer = orderSerializer(data = request.data)
@@ -66,7 +72,7 @@ def orderCreate(request):
     forecast_trainmodel.TimeSeriesForecastTrain()
     return Response(serializer.data)
 
-
+#API to delete an order by order ID
 @api_view(["DELETE"])
 def orderDelete(request, pk):
     order_delete = order.objects.get(orderID=pk)
@@ -76,39 +82,42 @@ def orderDelete(request, pk):
     order_delete.delete()
     return Response("DELETE SUCCESS")
 
+#API to get all the orders placed today
 @api_view(["GET"])
 def orderToday(request,pk):
     orders = order.objects.filter(orderDate=pk)
     serializer = orderSerializer(orders, many=True)
     return Response(serializer.data)
 
+#API to get details of all orders with a specific dealine
 @api_view(["GET"])
 def orderByDeadline(request,pk):
     orders = order.objects.filter(deadline=pk)
     serializer = orderSerializer(orders, many=True)
     return Response(serializer.data)
 
+#API to get details of all pending orders
 @api_view(["GET"])
 def orderPending(request):
     orders = order.objects.filter(status="pending")
     serializer = orderSerializer(orders, many=True)
     return Response(serializer.data)
 
-
+#API to get details of all the orders with status as Running
 @api_view(["GET"])
 def orderRunning(request):
     orders = order.objects.filter(status="running")
     serializer = orderSerializer(orders, many=True)
     return Response(serializer.data)
 
-
+#API to get details of all completed orders
 @api_view(["GET"])
 def orderCompleted(request):
     orders = order.objects.filter(status="completed")
     serializer = orderSerializer(orders, many=True)
     return Response(serializer.data)
 
-
+#API to get details of all orders of last 7 days from the input date
 @api_view(["GET"])
 def orderWeek(request,pk):
     temp=[]
@@ -121,7 +130,7 @@ def orderWeek(request,pk):
         params = formatData(temp)
     return Response(params)
 
-
+#API to get no. of orders of specific laptop of the week by laptop ID
 @api_view(["GET"])
 def orderWeekByLaptop(request,pk):
     temp=[]
@@ -137,19 +146,21 @@ def orderWeekByLaptop(request,pk):
     params.append(formatDataByLaptop(formatData(temp),pk))
     return Response(params)
 
-
+#API to get details of all available laptops
 @api_view(["GET"])
 def laptopList(request):
     laptops = laptop.objects.all()
     serializer = laptopSerializer(laptops, many=True)
     return Response(serializer.data)
 
+#API to get details of a particular laptop by laptop ID
 @api_view(["GET"])
 def laptopDetails(request,pk):
     laptops = laptop.objects.get(laptopID=pk)
     serializer = laptopSerializer(laptops, many=False)
     return Response(serializer.data)
 
+#API to return the scrapped data of real time laptop ratings from social media
 @api_view(["GET"])
 def laptopRatings(request,pk):
     params = scrapper.fetchData(pk)
@@ -176,7 +187,7 @@ def laptopRatings(request,pk):
 #     except ValueError as e:
 #         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
 
-
+#API to return data of the forecast model for next 7 days
 @api_view(["GET"])
 def forecastPredict(request,pk):
     try:
@@ -184,7 +195,7 @@ def forecastPredict(request,pk):
         return JsonResponse(param, safe=False)
     except ValueError as e:
         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
-
+#API to return data of the forecast of today or a specific date entered
 @api_view(["GET"])
 def forecastPredictToday(request,pk):
     try:
