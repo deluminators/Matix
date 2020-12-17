@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
-//Driver File to run and manage all the python codes
+#Driver File to run and manage all the python codes
 
 import os
 import sys
