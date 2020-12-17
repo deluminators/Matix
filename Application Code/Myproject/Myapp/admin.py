@@ -1,3 +1,5 @@
+#code to customise the admin pages of the web app
+
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from . models import order,laptop,socialData
