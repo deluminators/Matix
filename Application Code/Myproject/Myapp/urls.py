@@ -1,3 +1,5 @@
+#Code to redirect pages and data from the provided urls by calling corresponding functions
+
 from django.urls import path
 from . import views
 from knox import views as knox_views
