@@ -1,3 +1,5 @@
+#Code to format all the data in a specific format so that a universal data communication process can be achieved through JSON file exchanges and API calls
+
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from . models import order,laptop,socialData
