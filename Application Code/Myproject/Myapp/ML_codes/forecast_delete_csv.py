@@ -1,5 +1,5 @@
 
-Callable function for deletion in training dataset for updation of the prediction model's training process if any past orders are cancelled
+#Callable function for deletion in training dataset for updation of the prediction model's training process if any past orders are cancelled
 def delete_csv(data):
     import numpy as np 
     import pandas as pd 
