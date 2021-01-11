@@ -62,7 +62,7 @@ For existing bugs and adding more features open a issue [here](https://github.co
 | Team Member | Role |
 | --- | --- |
 | Sanjiban Sengupta | Machine Learning, Optimization Research, Backend Development, Dockerization |
-| Ananya Aprameya |Backend Development, Model Integration, Framework Development, Project Design|
+| Ananya Aprameya |Backend Development, Model Integration, Database modelling, Project Design|
 | Sarthak Bramha |Frontend Development, Optimization Research, Logic Development, API Design|
 | Sarthak Das |Frontend Development, Data Management|
 
