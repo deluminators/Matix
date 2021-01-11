@@ -1,0 +1,31 @@
+version: "3.2"
+services:
+  backend:
+    restart: always
+    build: 
+     context: ./Myproject/
+     dockerfile: Dockerfile
+    volumes:
+      - .:/Myproject
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate &&
+                      python3 manage.py runserver 0.0.0.0:8000"
+  frontend:
+    restart: always
+    build: 
+     context: ./Myproject/frontend
+     dockerfile: Dockerfile
+    volumes:
+      - ./Myproject/frontend:/Myproject/frontend
+      # One-way volume to use node_modules from inside image
+      - /Myproject/frontend/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+    command: npm start
