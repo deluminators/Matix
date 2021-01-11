@@ -57,10 +57,12 @@ Description and technical information about all application codes can be found  
 ### Contributions
 For existing bugs and adding more features open a issue [here](https://github.com/deluminators/Matix/issues)
 
-### Team Members
+### Developers
 ----------------------------------
-Sanjiban Sengupta,<b518041@iiit-bh.ac.in>   
-Ananya Aprameya,<b318004@iiit-bh.ac.in>  
-Sarthak Bramha,<b418045@iiit-bh.ac.in>  
-Sarthak Das,<b518042@iiit-bh.ac.in>  
+| Team Member | Role |
+| --- | --- |
+| Sanjiban Sengupta | Machine Learning, Optimization Research, Backend Development, Dockerization |
+| Ananya Aprameya |Backend Development, Model Integration, Framework Development, Project Design|
+| Sarthak Bramha |Frontend Development, Optimization Research, Logic Development, API Design|
+| Sarthak Das |Frontend Development, Data Management|
 
