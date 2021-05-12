@@ -29,7 +29,7 @@ export default class BufferLinesCalculator {
 				sumArr[counter] += this.laptopList[counter].time;
 			} else {
 				let curMinIndexInSum = this.getMinIndex(sumArr);
-				//   console.log("minimum index: " + curMinIndexInSum);
+				
 				if (sumArr[curMinIndexInSum] + this.laptopList[counter].time > 24) break;
 				ans[curMinIndexInSum].push(this.laptopList[counter]);
 				sumArr[curMinIndexInSum] += this.laptopList[counter].time;
@@ -41,27 +41,10 @@ export default class BufferLinesCalculator {
 			backlogLaptops.push(this.laptopList[i]);
 		}
 
-		// console.log(`item processed ${counter} out of ${this.laptopList.length}`);
-
-		// console.log(ans.toString());
-		// console.log(sumArr.toString());
-
-		// for (let index = 0; index < ans.length; index++) {
-		// 	console.log(ans[index].length);
-		// 	for (let i = 0; i < ans[index].length; i++) {
-		// 		console.log(ans[index][i].name);
-		// 	}
-		// 	console.log("--------");
-		// }
-
-		//   console.log("-------------------");
-		//   console.log("---------------------");
-
+		
 		if (backlogLaptops.length == 0) return true;
 		else return false;
 
-		//   for (let index = 0; index < backlogLaptops.length; index++) {
-		//     console.log(backlogLaptops[index].name);
-		//   }
+		
 	};
 }

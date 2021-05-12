@@ -10,7 +10,7 @@ const getNthDay = (days) => {
     const date = new Date();
     const last = new Date(date.getTime() - (days * 24 * 60 * 60 * 1000));
     const day =last.getDate();
-    const month=last.getMonth()+1;
+    const month=("0" + (last.getMonth() + 1)).slice(-2);
     const year=last.getFullYear();
     let obj={};
     obj[`${year}/${month}/${day}`] = week[last.getDay()];
@@ -34,7 +34,7 @@ const FormData = (data) => {
   for(let i=6;i>=1;i--){
     pweek.push(getNthDay(i));
   }
-  console.log(pweek);
+  //console.log(pweek);
   for(let i=1;i<7;i++){
     tweek.push(getNthDay(-i))
   }
@@ -65,8 +65,8 @@ const Details = () => {
       const res = await axios.get(`http://127.0.0.1:8000/laptop-details/${id+1}`)
       const res2 = await axios.get(`http://127.0.0.1:8000/laptop-ratings/${id+1}`)
       await getWeeklyData()
-      console.log(res2.data);
-      console.log(res.data);
+      //console.log(res2.data);
+      //console.log(res.data);
       setRatings(res2.data);
            setLoading(false);
       setLaptop(res.data);
@@ -78,7 +78,7 @@ const Details = () => {
   const getWeeklyData =async () => {
     try{
       setWeekLoading(true);
-      const res = await axios.get(`http://127.0.0.1:8000/order-weekbylaptop/${id+1}`);
+      const res = await axios.get(`http://127.0.0.1:8670/order-weekbylaptop/${id+1}`);
       setWeekData(FormData(res.data));
 
     }catch(er){
