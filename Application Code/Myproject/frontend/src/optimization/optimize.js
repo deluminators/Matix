@@ -126,20 +126,7 @@ export default class Optimize {
 		// console.log(ans.toString());
 		console.log(sumArr.toString());
 
-		// for (let index = 0; index < ans.length; index++) {
-		//   console.log(ans[index].length);
-		//   for (let i = 0; i < ans[index].length; i++) {
-		//     console.log(ans[index][i].name);
-		//   }
-		//   console.log("--------");
-		// }
-
-		// console.log("-------------------");
-		// console.log("---------------------");
-
-		// for (let index = 0; index < backlogLaptops.length; index++) {
-		//   console.log(backlogLaptops[index].name);
-		// }
+	
 
 		return { processedLaptops: ans, backlogLaptops, quantityProcessed, lines: sumArr };
 	};
