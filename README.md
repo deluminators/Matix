@@ -8,10 +8,8 @@
 [![Contributors](https://img.shields.io/github/contributors/deluminators/matix)](https://img.shields.io/github/contributors/deluminators/Matix)
 [![Top Language](https://img.shields.io/github/languages/top/deluminators/matix)](https://github.com/deluminators/Matix) 
 ![Repository Size](https://img.shields.io/github/repo-size/deluminators/matix)
-![Image Size](https://img.shields.io/docker/image-size/deluminators/matix)
 ![Dependencies](https://img.shields.io/depfu/deluminators/Matix)
 [![CodeFactor](https://www.codefactor.io/repository/github/deluminators/matix/badge)](https://www.codefactor.io/repository/github/deluminators/matix)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 <h5 align="center">Optimal Usage of manufacturing lines based on sales orders, backlogs and demand forecast minimizing cost and chances of delay thus producing working factory layout.
 </h5>
