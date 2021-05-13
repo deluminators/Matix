@@ -8,18 +8,18 @@ Contains all the application files for the project for both frontend and backend
 Using Django Framework for backend development we have used Restfull APIs for dynamic data exchange between the frontend and the Backend of the Project.The Data is fetched/transmitted from the API points and the backend functions of views.py help us in redirection and rendering of WebPages, Giving function calls, initiating ML codes and storing data into the DBSQLITE3 server.
 
 #### Frameworks used for Machine Learning
-LightGBM    
-ScikitLearn  
-NLTK  
-Tensorflow  
+* LightGBM    
+* ScikitLearn  
+* NLTK  
+* Tensorflow  
 
 #### Frameworks used for Web Harvesting
-Requests  
-BeautifulSoup  
+* Requests  
+* BeautifulSoup  
 
 #### Languages used for Logic Development
-Javascript  
-Python  
+* Javascript  
+* Python  
  
 ----
 
