@@ -23,6 +23,48 @@
 5. The project features the frontend for order creation, updation, listing details about items the factory manufacture, and the weekly plan for optimal usage of production lines, and the backend interacting via APIs while running the machine-learning models for forecasting demand (based on Time-series analysis on various features and parameters) and making recursive feedback and interaction with the modified optimizing algorithms in developing the plan.
 
 ----
+
+
+### Instructions to run
+1. Clone the repository  
+2. Launch the terminal or powershell or command prompt and enter the following command
+   ```
+    cd Matix/"Application Code"/Myproject
+    pip install -r requirements.txt 
+    python manage.py runserver
+   ```
+3. This will start the backend server running in the Django framework in default port 8000. To run the server in different port, execute the following command
+   ```
+   python manage.py runserver 8671
+   ```
+4. For starting the frontend framework running in ReactJS, enter the following command after moving to the base directory
+   ```
+   cd Matix/"Application Code"/Myproject/frontend
+   npm install
+   npm start
+   ```
+   This will start the ReactJS framework for frontend in port 3000  
+5. Launch any web browser and enter address [http://localhost:3000](http://localhost:3000) to access the  web application. Change in the running port will be prompted depending on occupancy.
+
+
+
+-----
+
+### Project Structure  
+* User interface presenting current manufacturing layout  
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/kahanikaar/kahanikaar.github.io/master/images/index3.png" height=70% width=70%  />  
+   </p> 
+   
+   
+* User interface presenting current manufacturing layout  
+* Optimal usage of manufacturing lines prioritizing current orders, backlogs, demand forecast   
+* Forecasting demand based on previous data and dynamic factors  
+* Featuring factory layout providing functionality for complete order flow    
+
+-----
+
 ### Technical Description
 #### Web Application Development
 ReactJS, Django Framework  
@@ -32,28 +74,6 @@ sqllite3
 Numpy,  Pandas,  LightGBM,  NLTK,  Scikit-Learn,  Tensorflow,  keras
 #### APIs Used
 Twitter Streaming API
-
------
-### Instructions to run
-1. Clone the repository  
-2. Launch the terminal or powershell or command prompt and enter the following command
-   ```
-    cd Matix/Application Code/Myproject
-    pip install -r requirements.txt 
-    python manage.py runserver
-   ```
-3. This will start the backend server running in the Django framework in default port 8000. To run the server in different port, execute the following command
-   ```
-   python manage.py runserver 8671
-   ```
-4. For starting the frontend framework running in ReactJS, enter the following command
-   ```
-   cd Matix/Application Code/Myproject/frontend
-   npm install
-   npm start
-   ```
-   This will start the ReactJS framework for frontend in port 3000  
-5. Launch any web browser and enter address [http://localhost:3000](http://localhost:3000) to access the  web application
 
 ----
 ### Application Code Description
