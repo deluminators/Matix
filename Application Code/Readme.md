@@ -20,12 +20,19 @@ BeautifulSoup
 #### Languages used for Logic Development
 Javascript  
 Python  
+ 
+----
 
-#### Machine Learning Model
+### Machine Learning Model
+<img src="https://raw.githubusercontent.com/kahanikaar/kahanikaar.github.io/master/images/index1(1).png" />
 For optimal scheduling of the manufacturing, machine learning models are used as to predict the forecasted demand based on time series and external factors being extracted from various sources like product rating, competitor's pricing, market prominence, etc.and thus leading to develop a feedback based interactive model being implemented for supplying data to the Optimization Engine. For the  subsequent time series based modelling, the LightGBM model was used for its varied of better methods of boosting weighted trees based on gradient differences. For passing parameters, we collected data about the product rating and competitior pricing through the methods of data mining using the beautifulSoup Framework and also implemented a NLP based sentimental analysis model for finding market prominence of the brand or the product based on social media data related to them. By collecting all this data, and doing predictions about future demand based on them we let the optimization model schedule the lines to run.
 
+----
 
-#### Optimization Model
+### Optimization Model
+<img src="https://raw.githubusercontent.com/kahanikaar/kahanikaar.github.io/master/images/index2.png" />
+<img src="https://raw.githubusercontent.com/kahanikaar/kahanikaar.github.io/master/images/index(1).png" />
+  
 Assumptions:  
 ● Factory has minimum 3 lines  
 ● There are infinite number of lines  
@@ -44,3 +51,6 @@ The orders are prioritized based on their deadline and time for production. Init
 are assigned a single product based on this priority. Before scheduling another product on the
 line , it is checked which line has less load currently, so that at the end of the day no line stays
 idle for much time.
+
+----
+
