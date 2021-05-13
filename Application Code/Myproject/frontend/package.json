@@ -22,7 +22,7 @@
     "react-tiny-virtual-list": "^2.2.0",
     "recharts": "^1.8.5",
     "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
