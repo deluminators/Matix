@@ -3,13 +3,22 @@
 <img height=50% width=50% src=https://github.com/kahanikaar/kahanikaar.github.io/blob/master/images/matix1.png />
 </p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Contributors](https://img.shields.io/github/contributors/deluminators/matix)](https://img.shields.io/github/contributors/deluminators/Matix)
 [![Top Language](https://img.shields.io/github/languages/top/deluminators/matix)](https://github.com/deluminators/Matix) 
-![Repository Size](https://img.shields.io/github/repo-size/deluminators/matix)
-![Dependencies](https://img.shields.io/depfu/deluminators/Matix)
 [![CodeFactor](https://www.codefactor.io/repository/github/deluminators/matix/badge)](https://www.codefactor.io/repository/github/deluminators/matix)
+![Dependencies](https://img.shields.io/depfu/deluminators/Matix)
+![Repository Size](https://img.shields.io/github/repo-size/deluminators/matix)
+</br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+![Image Size](https://img.shields.io/docker/image-size/deluminators/matix)
+![PR](https://img.shields.io/github/issues-pr-closed/deluminators/matix)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+</br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+ [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://github.com/deluminators/matix) 
+ [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <h5 align="center">Optimal Usage of manufacturing lines based on sales orders, backlogs and demand forecast minimizing cost and chances of delay thus producing working factory layout.
 </h5>
@@ -95,9 +104,13 @@ For existing bugs and adding more features open a issue [here](https://github.co
 
 ----------
 ### Developers
-| Team Member | Handles | Role |
-| --- | --- | --- |
-| Sanjiban Sengupta | [@kahanikaar](https://github.com/kahanikaar)| Machine Learning, Optimization Research, Backend Development, Dockerization |
-| Ananya Aprameya | [@Aprameya20](https://github.com/Aprameya20)|Backend Development, Model Integration, Database modelling, Project Design|
-| Sarthak Bramha | [@sarthak-2001](https://github.com/sarthak-2001)|Frontend Development, Optimization Research, Logic Development, API Design|
+<table>
+		<tr>
+			<td align="center"><img src="https://avatars.githubusercontent.com/u/40017007?v=4"  width=100px;"><br /><b>Sanjiban Sengupta</b><br/><a href="https://github.com/kahanikaar"> <sub>@kahanikaar</sub> </a><br/><sub>Machine Learning, Optimization Research, Backend Development, Dockerization</sub></td>
+		   <td align="center"><img src="https://avatars.githubusercontent.com/u/50028306?v=4"  width=100px;"><br /><b>Ananya Aprameya</b><br/><a href="https://github.com/Aprameya20"><sub>@Aprameya20</sub></a><br/><sub>Backend Development, Model Integration, Database modelling, Project Design</sub></td> 
+			<td align="center"><img src="https://avatars.githubusercontent.com/u/46246685?v=4"  width=100px;"><br /><b>Sarthak Bramha</b><br/><a href="https://github.com/sarthak-2001"><sub>@sarthak-2001</sub></a><br/><sub>Frontend Development, Optimization Research, Logic Development, API Design</sub></td>			
+		</tr>
+		
+</table>
 
+ ----
