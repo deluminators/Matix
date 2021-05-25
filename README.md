@@ -44,7 +44,7 @@
    ```
 3. This will start the backend server running in the Django framework in default port 8000. To run the server in different port, execute the following command
    ```
-   python manage.py runserver 8671
+   python manage.py runserver 8670
    ```
 4. For starting the frontend framework running in ReactJS, enter the following command after moving to the base directory
    ```
