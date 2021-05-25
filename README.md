@@ -59,6 +59,15 @@
 
 -----
 
+### Demo
+Try the Demo web application, deployed here https://matixengine.herokuapp.com/ using the following credentials
+```
+Username: DELL01
+Password: Dell@1234
+```
+
+-----
+
 ### Project Structure  
 * User interface presenting current manufacturing layout  
 
