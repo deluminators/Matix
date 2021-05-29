@@ -131,8 +131,4 @@ def predictToday(initDate="today"):
     return finalResult    
 
 
-'''
-finalResult.update({"date":df['date'][ind],"item":df['item'][ind]})
-    
-    print(finalRe)
-'''
+

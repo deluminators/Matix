@@ -7,11 +7,16 @@ def socialMediaDellTech():
     import json
     import ast
     import random
+    import os
     from datetime import date,timedelta,datetime
     currDate=str(date.today())
     initDate=(datetime.strptime(currDate, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     #Add your credentials here
-    twitter_keys = {'consumer_key':'b0rV4K1WmzpwvPnyhcyEyfRGC','consumer_secret':'t0omH3k7YibGURJYyIfgmoSDuRqpIN8eHIWzvXG5gn4hu6nQGp','access_token_key':'1328561335-l3Cmxr3fumP8aodoLLK1ZSlRgVEraCFAj4uWZCs','access_token_secret':'8NUY5jtJtRdU4mwt7U79CPpHFuRZL3xB9d5s5HwpBiir7'}
+    consumer_key=os.environ('consumer_key')
+    consumer_secret=os.environ('consumer_secret')
+    access_token_key=os.environ('access_token_key')
+    access_token_secret=os.environ('access_token_secret')
+    twitter_keys = {'consumer_key': consumer_key,'consumer_secret':consumer_secret,'access_token_key':access_token_key,'access_token_secret':access_token_secret}
     auth = tweepy.OAuthHandler(twitter_keys['consumer_key'], twitter_keys['consumer_secret'])
     auth.set_access_token(twitter_keys['access_token_key'], twitter_keys['access_token_secret'])
     api = tweepy.API(auth,wait_on_rate_limit=True)

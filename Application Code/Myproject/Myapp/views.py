@@ -166,26 +166,26 @@ def laptopRatings(request,pk):
     params = scrapper.fetchData(pk)
     return Response(params)
 
+#API to predict social media sentiment analysis score
+@api_view(["GET"])
+def socialPredict(request):
+     try:
+         serializer = socialSerializer(data = [23.67,34.89])
+         if serializer.is_valid():
+             serializer.save()
+         param = serializer.data
+         return JsonResponse(param, safe=False)
+     except ValueError as e:
+         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
 
-# @api_view(["GET"])
-# def socialPredict(request):
-#     try:
-#         serializer = socialSerializer(data = [23.67,34.89])
-#         if serializer.is_valid():
-#             serializer.save()
-#         param = serializer.data
-#         return JsonResponse(param, safe=False)
-#     except ValueError as e:
-#         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
 
-
-# @api_view(["GET"])
-# def socialDPredict(request):
-#     try:
-#         param = socialMedia.socialMedia()
-#         return JsonResponse(param, safe=False)
-#     except ValueError as e:
-#         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
+@api_view(["GET"])
+ def socialDPredict(request):
+     try:
+         param = socialMedia.socialMedia()
+         return JsonResponse(param, safe=False)
+     except ValueError as e:
+         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
 
 #API to return data of the forecast model for next 7 days
 @api_view(["GET"])
@@ -209,6 +209,7 @@ def forecastTrain(request):
     forecast_trainmodel.TimeSeriesForecastTrain()
     return HttpResponse("DONE")
 
-#  def socialTrain(request):
-#     forecast_trainmodel.TimeSeriesForecastTrain()
-#     return HttpResponse("DONE")
+#training the social media sentiment analysis train model
+def socialTrain(request):
+     forecast_trainmodel.TimeSeriesForecastTrain()
+     return HttpResponse("DONE")
