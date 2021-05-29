@@ -31,8 +31,8 @@ urlpatterns=[
     path('order-running/', views.orderRunning, name="order-running"),
     path('order-completed/', views.orderCompleted, name="order-completed"),
     
-    # path('social-predict/', views.socialPredict, name="social-predict"),
-    # path('social-delltrain', views.socialTrain, name="social-train"),
+    path('social-predict/', views.socialPredict, name="social-predict"),
+    path('social-delltrain', views.socialTrain, name="social-train"),
 
 
     path('forecast/<str:pk>', views.forecastPredict, name="forecast"),
