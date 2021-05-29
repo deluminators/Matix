@@ -9,7 +9,7 @@ const week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Satur
 const getNthDay = (days) => {
     const date = new Date();
     const last = new Date(date.getTime() - (days * 24 * 60 * 60 * 1000));
-    const day =last.getDate();
+    const day =("0" + (last.getDate())).slice(-2);
     const month=("0" + (last.getMonth() + 1)).slice(-2);
     const year=last.getFullYear();
     let obj={};
