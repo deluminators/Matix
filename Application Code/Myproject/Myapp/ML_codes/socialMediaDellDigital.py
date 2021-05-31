@@ -8,14 +8,17 @@ def socialMediaDellDigital():
     import ast
     import random
     import os
+    from dotenv import load_dotenv
+    load_dotenv()
+
     from datetime import date,timedelta,datetime
     currDate=str(date.today())
     initDate=(datetime.strptime(currDate, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     #Add your credentials here
-    consumer_key=os.environ('consumer_key')
-    consumer_secret=os.environ('consumer_secret')
-    access_token_key=os.environ('access_token_key')
-    access_token_secret=os.environ('access_token_secret')
+    consumer_key=str(os.getenv('consumer_key'))
+    consumer_secret=str(os.getenv('consumer_secret'))
+    access_token_key=str(os.getenv('access_token_key'))
+    access_token_secret=str(os.getenv('access_token_secret'))
     twitter_keys = {'consumer_key': consumer_key,'consumer_secret':consumer_secret,'access_token_key':access_token_key,'access_token_secret':access_token_secret}
     auth = tweepy.OAuthHandler(twitter_keys['consumer_key'], twitter_keys['consumer_secret'])
     auth.set_access_token(twitter_keys['access_token_key'], twitter_keys['access_token_secret'])
