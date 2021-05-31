@@ -180,7 +180,7 @@ def socialPredict(request):
 
 
 @api_view(["GET"])
- def socialDPredict(request):
+def socialDPredict(request):
      try:
          param = socialMedia.socialMedia()
          return JsonResponse(param, safe=False)

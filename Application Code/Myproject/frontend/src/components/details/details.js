@@ -78,7 +78,7 @@ const Details = () => {
   const getWeeklyData =async () => {
     try{
       setWeekLoading(true);
-      const res = await axios.get(`http://127.0.0.1:8670/order-weekbylaptop/${id+1}`);
+      const res = await axios.get(`http://127.0.0.1:8000/order-weekbylaptop/${id+1}`);
       setWeekData(FormData(res.data));
 
     }catch(er){
